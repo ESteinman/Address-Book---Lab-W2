@@ -9,8 +9,7 @@ const { After, Given, Then , When} = require("cucumber");
     });
 
     Then('I should see {string}', async function(content) {
-        // Write code here that turns the phrase above into concrete actions
-        return 'pending'
+        return await this.pageHasTextContent(content)
     });
 
     When('I click {string}', async function(string) {
