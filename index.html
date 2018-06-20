@@ -10,13 +10,7 @@
 
 <body>
   <h1>Contacts</h1>
-  <!--m add the button's markup -->
   <button class="add-contact">Add Contact</button>
-    <div>
-    <p>You have no contacts in your address book</p>
-  </div>
-  <!--...-->
-
   <form class="new-contact-form" action= "#">
     <label for="name">Name</label>
     <input id="contact-name" name="name" type="text">
@@ -32,7 +26,9 @@
     <input id="contact-twitter" name="twitter" type="text">  
     <input class="save-contact" type="submit" value="Save contact">
   </form>
-  <script src="./dist/bundle.js"></script>
+  <div class="contact-list">
+    </div>
+<script src="./dist/bundle.js"></script>
 </body>
 
 </html>
