@@ -1,4 +1,4 @@
-const { After, Given, Then , When} = require("cucumber");
+const { After, Given, Then , When} = require('cucumber');
 
     After(async function() {
         return await this.closeHomePage()
@@ -18,11 +18,10 @@ const { After, Given, Then , When} = require("cucumber");
 
     Then('I fill in {string} with {string}', async function(field, content) {
         return await this.fillFormField(field.toLowerCase(), content)
-        });
+    });
 
-    Then('I sould have {int} contact in my adress book', async function(int) {
-        // Write code here that turns the phrase above into concrete actions
-        return 'pending'
+    Then('I should have {int} contact in my address book', async function(contactCount) {
+        return await this.checkContactStorageCount(contactCount)
     });
 
     Then('I should not see {string}', async function(string) {
