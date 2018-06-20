@@ -12,8 +12,8 @@ const { After, Given, Then , When} = require("cucumber");
         return await this.pageHasTextContent(content)
     });
 
-    When('I click {string}', async function(string) {
-        return await this.clickOnAddContactBtn()
+    When('I click {string}', async function(btnName) {
+        return await this.clickOnButton(btnName.toLowerCase())
     });
 
     Then('I fill in {string} with {string}', async function(field, content) {

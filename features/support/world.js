@@ -10,7 +10,7 @@ class AdressBookWorld {
 
     // Open the home page using puppeteer
     async openHomePage() {
-        this.browser = await puppeteer.launch()
+        this.browser = await puppeteer.launch({headless: false, slowmo: 100})
         this.page = await this.browser.newPage()
         await this.page.goto(HOME_PAGE)
     }
@@ -25,8 +25,8 @@ class AdressBookWorld {
         expect(actualContent).to.be.eq(expectedContent)
     }
 
-    async clickOnAddContactBtn() {
-        const btnSelector = '.add-contact'
+    async clickOnButton(btnName) {
+        const btnSelector = this.btnSelectorFromName(btnName.toLowerCase())
         await this.page.waitForSelector(btnSelector)
         await this.page.click(btnSelector)
     }
@@ -36,6 +36,20 @@ class AdressBookWorld {
         await this.page.waitForSelector(inputSelector)
         this.inputElement = await this.page.$(inputSelector)
         await this.inputElement.type(content)
+    }
+
+    btnSelectorFromName(btnName) {
+        switch (btnName) {
+            case 'add contact':
+                return '.add-contact'
+                break
+            case 'save contact' :
+                return '.save-contact'
+                break
+            default:
+                throw `${btnName} button is not defined`
+                break
+        }
     }
 }
 
