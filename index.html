@@ -5,29 +5,66 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link  href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css"  rel="stylesheet">
   <title>Address book</title>
 </head>
 
 <body>
-  <h1>Contacts</h1>
-  <button class="add-contact">Add Contact</button>
-  <form class="new-contact-form" action= "#">
-    <label for="name">Name</label>
-    <input id="contact-name" name="name" type="text">
-    <label for="email">Email</label>
-    <input id="contact-email" name="email" type="email">
-    <label for="phone">Phone</label>
-    <input id="contact-phone" name="phone" type="text">
-    <label for="company">Company</label>
-    <input id="contact-company" name="company" type="text">
-    <label for="notes">Notes</label>
-    <textarea id="contact-notes" name="notes" type="text"></textarea>
-    <label for="twitter">Twitter</label>
-    <input id="contact-twitter" name="twitter" type="text">  
-    <input class="save-contact" type="submit" value="Save contact">
-  </form>
-  <div class="contact-list">
+  <div class="bg-center bg-grey">
+    <nav class="sticky pin-t flex items-center justify-between flex-wrap bg-grey-dark p-6 pl-8">
+      <div class="flex items-center flex-no-shrink text-white mr-7">
+        <span class="font-sans font-thin text-3xl p-3">My Adress book</span>
+      </div>
+          <div class="block lg:hidden">
+          </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+              <div class="text-sm lg:flex-grow">
+                </a>
+            </div>
+              <div>    </div>
+        </div>
+      </nav>
+
+  <div class="flex flex-col items-center h-6/7 w-full bg-grey">
+        <div class="w-full bg-grey p-8 md:max-w-sm md:px-5">
+            <h1 class ="block w-full text-center px-8 mb-4 text-4xl font-sans font-thin text-white">Add new contact</h1>
+            <form class="new-contact-form w-full max-w" action= "#">
+              <div class="flex flex-col mb-4 md:w-full">
+                <label for="name"></label>
+                <input class="border-b border-b-2 hover:border-grey-dark bg-grey py-4 px-3 font-light text-grey-darkest" placeholder="name" id="contact_name" name="name" type="text">
+              </div>
+              <div class="flex flex-col mb-4 md:w-full">
+                <label for="email"></label>
+                <input class="border-b border-b-2 hover:border-grey-dark bg-grey py-4 px-3 font-light text-grey-darkest" placeholder="email" id="contact-email" name="email" type="email">
+              </div>
+              <div class="flex flex-col mb-4 md:w-full">
+                <label for="phone"></label>
+                <input class="border-b border-b-2 hover:border-grey-dark bg-grey py-4 px-3 font-light text-grey-darkest" placeholder="phone" id="contact-phone" name="phone" type="text">
+              </div>
+              <div class="flex flex-col mb-4 md:w-full">
+                  <label for="company"></label>
+                  <input class="border-b border-b-2 hover:border-grey-dark bg-grey py-4 px-3 font-light text-grey-darkest" placeholder="company" id="contact-company" name="company" type="text">
+                </div>
+              <div class="flex flex-col mb-4 md:w-full">
+                  <label for="notes"></label>
+                  <textarea class="border-b border-b-2 hover:border-grey-dark bg-grey py-4 px-3 font-light text-grey-darkest" placeholder="notes" id="contact-notes" name="notes" type="text"></textarea>
+                </div>
+              <div class="flex flex-col mb-6 md:w-full">
+                  <label for="twitter"></label>
+                  <input class="border-b border-b-2 hover:border-grey-dark bg-grey py-4 px-3 font-light text-grey-darkest" placeholder="twitter" id="contact-twitter" name="twitter" type="text">
+                </div>
+              <button class="block bg-grey-lighter  hover:bg-grey-dark  text-grey-darkest font-semibold text-3xl hover:text-grey-darkest mx-auto rounded-full w-16 h-16" type="submit" value="save contact">+</button>
+            </form>
+          </div>
+              <div class="contact-list"> 
+            </div>
+            </div>
+
     </div>
+    
+
+
+  
 <script src="./dist/bundle.js"></script>
 </body>
 

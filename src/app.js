@@ -12,18 +12,33 @@ const renderContacts = () => {
         contacts.forEach(contact => {
             let li = document.createElement('li')
             li.innerHTML = `
-                <div class="card">
-                    <div class="image">
-                        <img src="https://ca-address-book.herokuapp.com/images/pine.jpg" />
-                    </div>
-                    <div class="content">
-                        <h1>${ contact.name }</h1>
-                        <h2>${ contact.company }</h2>
-                        <p>${ contact.notes }</p>
-                        ${ contact.email } |
-                        <a href="https://www.twitter.com/${ contact.twitter}">@${contact.twitter}</a>
-                    </div>
-                </div>
+                    <div class ="block w-auto text-center text-grey-dark></div>
+                            <div class="flex max-w w-auto overflow-hidden bg-grey">
+                                    <img class="rounded-full opacity-75 w-1/2 m-2" src="https://www.haikudeck.com/static/img/hd-avatar.png" />
+                                        </div>
+                                        <text class="flex flex-col bg-grey rounded-sm text-2xl font-light text-center text-white mb-1 px-4 py-2">${ contact.name }</text>
+                                            
+                                        <text class=" flex text-xs font-light text-grey-dark text-left px-2">email</text>
+                                                <text class=" flex text-xs font-light border-b hover:border-grey-dark text-grey-darkest text-left px-2 py-1">${ contact.email }</text>
+
+                                            <text class="flex text-xs font-light  leading-tight text-grey-dark text-left px-2 pt-1">phone</text>
+                                                <text class="flex text-xs font-light border-b hover:border-grey-dark leading-tight text-grey-darkest text-left px-2 py-1">${ contact.phone }</text>
+
+                                                <text class="flex text-xs font-light  leading-tight text-grey-dark text-left px-2 pt-1">company</text>
+                                                    <text class="flex text-xs font-light border-b hover:border-grey-dark leading-tight text-grey-darkest text-left px-2 py-1">${ contact.company }</text>
+
+                                                    <text class="flex text-xs font-light  leading-tight text-grey-dark text-left px-2 pt-1">notes</text>
+                                                    <text class="flex text-xs font-light border-b hover:border-grey-dark leading-tight text-grey-darkest text-left px-2 py-1">${ contact.notes }</text>
+
+                                                            <text class="flex text-xs font-light border-b hover:border-grey-dark leading-tight text-grey-darkest text-left mb-8 px-2"><a href="https://www.twitter.com/${ contact.twitter}">
+                                                        <div class="w-6 items-center leading-tight">
+                                                            <img src= "https://cdn2.iconfinder.com/data/icons/minimalism/512/twitter.png" /></a>    @${ contact.twitter}</text>
+                                                        
+                                                                </div>
+                                                                    </div>
+                                                                        </div>
+                                                                            </div>
+                                                                                </div>
             `
             ul.appendChild(li)
         })
