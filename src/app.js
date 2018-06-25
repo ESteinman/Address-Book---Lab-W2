@@ -45,7 +45,7 @@ const renderContacts = () => {
         
         div.appendChild(ul)
     } else {
-        div.innerHTML = '<p>You have no contacts in your address book</p>'
+        div.innerHTML = '<p class>You have no contacts in your address book</p>'
     }
 }
 
